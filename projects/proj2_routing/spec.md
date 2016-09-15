@@ -38,6 +38,8 @@ To get started, you will implement a learning switch, which learns the location 
 
 Recall from class that a learning switch is not a very effective routing technique; its greatest shortcoming is that it breaks when the network has loops.  That's why our next step will be to implement a more capable distance vector router.  That's also why you only need to test it on topologies without loops.
 
+Additionally, a learning switch that never exchanges routing messages will not be able to avoid routing loops in case of topology change (e.g., if a host moves from one switch to another). You therefore only need to test on static topologies without failures.
+
 ## Part 2: Distance-Vector Router
 
 We've provided a skeleton `dv_router.py` file with the beginnings of a `DVRouter` class for you to flesh out, implementing your distance vector router. The `DVRouter` class inherits from the `DVRouterBase` class, which adds a little bit to the basic `Entity` class.  Specifically, it adds a `POISON_MODE` flag and a `handle_timer` method.  When your router's `self.POISON_MODE` is `True`, your router should send poisoned routes and poisoned reverses (and when `False`, it should not).  The `handle_timer` method is called periodically.  When it is called, your router should send all its routes to its neighbors.
