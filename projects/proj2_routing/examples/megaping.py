@@ -8,8 +8,8 @@ hosts will send a ping to it simultaneously.
 In order for this to work, the hosts need to be MegaHosts, so you probably
 want to put --default-host-type=examples.megaping at the start of your
 commandline.  So a full commandline might look like:
-python sim/boot.py --default-host-type=examples.megaping \
-                   topos.candy examples.megaping
+python simulator.py --default-host-type=examples.megaping \
+                    topos.candy examples.megaping
 
 If you pass in --super, it'll send several megapings at one second intervals.
 
