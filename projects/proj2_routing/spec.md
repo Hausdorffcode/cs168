@@ -90,6 +90,14 @@ We will put your routers through a variety of scenarios like the test cases incl
 
 No, you don't need to worry about your code's resource usage as long as it completes within a reasonable time limit. However, do avoid sending excessive routing updates.
 
+##### What should we do if a path expires but a higher-cost alternative exists?
+
+You may either switch over to it immediately, or drop packets to the affected destination until you receive another advertisement for the higher-cost alternative.
+
+##### What should we do if there are two equal-cost paths and one expires?
+
+Don't begin dropping packets in this case. Instead, either switch over immediately to the other path, or always break ties between paths by using the freshest available path.
+
 ## Acknowledgments
 
 This assignment was developed by Murphy McCauley in [Fall 2011](https://inst.eecs.berkeley.edu/~ee122/fa11/).
