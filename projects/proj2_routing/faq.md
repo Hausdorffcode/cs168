@@ -1,22 +1,22 @@
 # Frequently Asked Questions
 
-##### How will our code be tested?
+### How will our code be tested?
 
 We will put your routers through a variety of scenarios like the test cases included with the project. These scenarios will involve different topologies, topology changes, and link failures, and your routers will be graded on how well they deliver packets, adapt to changes, and conform to the requirements. These tests will be more extensive than the tests included with the project in `tests/`, and passing those tests is no guarantee that your code will pass all of our tests.
 
-##### Does our code have to be optimized?
+### Does our code have to be optimized?
 
 No, you don't need to worry about your code's resource usage as long as it completes within a reasonable time limit. However, do avoid sending excessive routing updates.
 
-##### What should we do if a path expires but a higher-cost alternative exists? ([@394](https://piazza.com/class/iq6sgotn6pp37f?cid=371))
+### What should we do if a path expires but a higher-cost alternative exists? ([@394](https://piazza.com/class/iq6sgotn6pp37f?cid=394))
 
 You may either switch over to it immediately, or drop packets to the affected destination until you receive another advertisement for the higher-cost alternative.
 
-##### What should we do if there are two equal-cost paths and one expires?
+### What should we do if there are two equal-cost paths and one expires?
 
 Don't begin dropping packets in this case. Instead, either switch over immediately to the other path, or always break ties between paths by using the freshest available path.
 
-##### What's the difference between split horizon and poison reverse? ([@371](https://piazza.com/class/iq6sgotn6pp37f?cid=371))
+### What's the difference between split horizon and poison reverse? ([@371](https://piazza.com/class/iq6sgotn6pp37f?cid=371))
 
 Split horizon (aka "simple split horizon") and poison reverse (aka "split horizon with poisoned reverse") are two different ways of doing the same thing (avoiding count-to-infinity in some cases). They differ in (1) how they encode reverse routes, (2) what that means for routing message sizes, and (3) what that means for support for incremental updates.
 
@@ -28,7 +28,7 @@ Split horizon (aka "simple split horizon") and poison reverse (aka "split horizo
 
 Note that neither (2) nor (3) are important for this project, because you don't need to care about sending very few routing messages, and you don't need to perform incremental (triggered) updates.
 
-##### What should we do if the best route to a destination increases in cost? ([@404](https://piazza.com/class/iq6sgotn6pp37f?cid=404))
+### What should we do if the best route to a destination increases in cost? ([@404](https://piazza.com/class/iq6sgotn6pp37f?cid=404))
 
 If a neighbor tells you its route to a destination has increased in cost, you must trust them and update your routing table immediately. Not doing so will break all kinds of things until the bad route times out, including fallback to better paths as you say, as well as loop avoidance in case they are now using you as their next hop and are performing poison reverse.
 
