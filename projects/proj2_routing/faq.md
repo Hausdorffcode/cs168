@@ -30,6 +30,6 @@ Note that neither (2) nor (3) are important for this project, because you don't 
 
 ### What should we do if the best route to a destination increases in cost? ([@404](https://piazza.com/class/iq6sgotn6pp37f?cid=404))
 
-If a neighbor tells you its route to a destination has increased in cost, you must trust them and update your routing table immediately. Not doing so will break all kinds of things until the bad route times out, including fallback to better paths as you say, as well as loop avoidance in case they are now using you as their next hop and are performing poison reverse.
+If a neighbor tells you its route to a destination has increased in cost, you must trust them and update your routing table immediately. Not doing so will break all kinds of things until the bad route times out, including fallback to better paths, as well as loop avoidance in case they are now using you as their next hop and are performing poison reverse.
 
 This highlights a common pitfall: only ever replacing a route with a lower-cost route, even when the source of the route update is authoritative regarding the cost increase.
