@@ -11,7 +11,7 @@ In this assignment, you'll implement distance-vector routing, a distributed rout
 
 #### Resources
 
-- If you have questions, first take a look at the [FAQ section](#faq).  If your question isn't answered there, post to Piazza.
+- If you have questions, first take a look at the [FAQ page](faq.md).  If your question isn't answered there, post to Piazza.
 - The distance-vector routing protocol you'll implement is similar to RIP. [RFC 2453](https://www.ietf.org/rfc/rfc2453.txt) describes RIPv2 and might be helpful for understanding the subtleties of this assignment. It covers several features of RIP that your distance-vector router should also implement, particularly split horizon and split horizon with poisoned reverse (3.4.3), and timed updates and route expiration (3.8). RIP has a few features that we don't require you to implement for this assignment, including triggered updates (3.4.4) and hold-down.
 
 ## Background on routing
@@ -74,29 +74,15 @@ Your implementation should perform the following:
 
 - **You may not share submitted code with anyone other than your partner.** You may discuss the assignment requirements or your solutions away from a computer and without sharing code, but you should not discuss the detailed nature of your solution (e.g., what algorithm was used to compute the routing table). You may share your test code with anyone in the class. Please don't put any code from this project in a public repository.
 
+## FAQ
+
+See the [FAQ page](faq.md).
+
 ## Submission Details
 
 You will be submitting your project on [okpy](http://okpy.org). When you visit the webpage, sign in using your Berkeley email. You should already be automatically registered as a student in the course. If this is not the case or you encounter any issues, please fill out this [form](https://docs.google.com/a/berkeley.edu/forms/d/e/1FAIpQLScA8gyPc1C0bNCAqWyKWWZRANuXBP2yslFeddtrwtvI6pyIjA/viewform).
 
 You can then upload your project files into the "Project 2" assignment by selecting the assignment and then selecting to create a new submission. You will not be receiving any feedback from the autograder until the project is over, but you can submit as many times as you want. By default, your most recent submission will be graded. If you don't want this behavior, you can select to have a previous one graded instead.
-
-## FAQ
-
-##### How will our code be tested?
-
-We will put your routers through a variety of scenarios like the test cases included with the project. These scenarios will involve different topologies, topology changes, and link failures, and your routers will be graded on how well they deliver packets, adapt to changes, and conform to the requirements. These tests will be more extensive than the tests included with the project in `tests/`, and passing those tests is no guarantee that your code will pass all of our tests.
-
-##### Does our code have to be optimized?
-
-No, you don't need to worry about your code's resource usage as long as it completes within a reasonable time limit. However, do avoid sending excessive routing updates.
-
-##### What should we do if a path expires but a higher-cost alternative exists?
-
-You may either switch over to it immediately, or drop packets to the affected destination until you receive another advertisement for the higher-cost alternative.
-
-##### What should we do if there are two equal-cost paths and one expires?
-
-Don't begin dropping packets in this case. Instead, either switch over immediately to the other path, or always break ties between paths by using the freshest available path.
 
 ## Acknowledgments
 
