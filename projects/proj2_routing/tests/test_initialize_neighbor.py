@@ -14,6 +14,7 @@ routing tables immediately, without waiting for a timeout.
 import sim
 import sim.api as api
 import sim.basics as basics
+import sim.cable as cable
 
 from tests.test_simple import GetPacketHost, NoPacketHost
 
@@ -32,7 +33,11 @@ def launch():
         yield 5
 
         api.userlog.debug('Linking s1 and s2')
-        s1.linkTo(s2)
+        def test_cable():
+            c = cable.BasicCable()
+            c.tx_time = 0
+            return c
+        s1.linkTo(s2, cable=(test_cable(), test_cable()))
         yield 0.1
         api.userlog.debug('Sending ping from h1 to h2')
         h1.ping(h2)
