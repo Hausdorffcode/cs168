@@ -33,3 +33,9 @@ Note that neither (2) nor (3) are important for this project, because you don't 
 If a neighbor tells you its route to a destination has increased in cost, you must trust them and update your routing table immediately. Not doing so will break all kinds of things until the bad route times out, including fallback to better paths, as well as loop avoidance in case they are now using you as their next hop and are performing poison reverse.
 
 This highlights a common pitfall: only ever replacing a route with a lower-cost route, even when the source of the route update is authoritative regarding the cost increase.
+
+### What is the purpose of HostDiscoveryPackets, and how are they different from handle\_link\_up? ([@391](https://piazza.com/class/iq6sgotn6pp37f?cid=391), [@423](https://piazza.com/class/iq6sgotn6pp37f?cid=423), [@439](https://piazza.com/class/iq6sgotn6pp37f?cid=439), [@456](https://piazza.com/class/iq6sgotn6pp37f?cid=456), [@463](https://piazza.com/class/iq6sgotn6pp37f?cid=463), [@479](https://piazza.com/class/iq6sgotn6pp37f?cid=479))
+
+handle\_link\_up tells you that you have a new link, which port it's connected to, and what its latency is. It doesn't tell you anything about what's on the other side of the link.
+
+A HostDiscoveryPacket tells you that if you send out of that port, you'll reach a host that can be identified using the address in packet.src. If it weren't for HostDiscoveryPackets, you wouldn't know how to refer to a host.
