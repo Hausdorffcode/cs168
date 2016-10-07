@@ -9,7 +9,6 @@ below.
 
 from __future__ import print_function
 
-import fcntl
 import os
 import select
 import subprocess
