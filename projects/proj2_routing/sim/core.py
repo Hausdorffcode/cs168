@@ -64,6 +64,14 @@ class EventLogger(logging.Handler):
                 o['exc'] = traceback.format_exception(*record.exc_info)
         events.send_log(o)
 
+class EventCounter(logging.Handler):
+
+    def __init__(self, *args, **kw):
+        logging.Handler.__init__(self, *args, **kw)
+        self.count = 0
+
+    def emit(self, record):
+        self.count += 1
 
 if sim.config.console_log:
     logging.basicConfig(level=logging.DEBUG)
@@ -71,6 +79,8 @@ else:
     logging.getLogger().setLevel(logging.DEBUG)
 
 logging.getLogger().addHandler(EventLogger())
+error_counter = EventCounter(level=logging.ERROR)
+logging.getLogger().addHandler(error_counter)
 simlog = logging.getLogger("simulator")
 userlog = logging.getLogger("user")
 
@@ -414,7 +424,6 @@ class World(object):
             pass
         except SystemExit:
             simlog.debug("Simulation stopped")
-            raise
         except:
             simlog.exception("Simulation ended due to exception")
         finally:
@@ -461,7 +470,6 @@ class World(object):
             pass
         except SystemExit:
             simlog.debug("Simulation stopped")
-            raise
         except:
             simlog.exception("Simulation ended due to exception")
         finally:

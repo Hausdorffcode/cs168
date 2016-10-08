@@ -119,6 +119,7 @@ def main():
         # Non-interactive always starts automatically
         import sim.core as core
         core.world.start(threaded=False)
+        sys.exit(0 if core.error_counter.count == 0 else 1)
 
 
 def pre_options(default_host_type=None,
