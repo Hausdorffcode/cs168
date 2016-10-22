@@ -1,0 +1,215 @@
+
+; <<>> DiG 9.8.3-P1 <<>> +trace +tries=1 +nofail google.com
+;; global options: +cmd
+.			478616	IN	NS	l.root-servers.net.
+.			478616	IN	NS	m.root-servers.net.
+.			478616	IN	NS	a.root-servers.net.
+.			478616	IN	NS	b.root-servers.net.
+.			478616	IN	NS	c.root-servers.net.
+.			478616	IN	NS	d.root-servers.net.
+.			478616	IN	NS	e.root-servers.net.
+.			478616	IN	NS	f.root-servers.net.
+.			478616	IN	NS	g.root-servers.net.
+.			478616	IN	NS	h.root-servers.net.
+.			478616	IN	NS	i.root-servers.net.
+.			478616	IN	NS	j.root-servers.net.
+.			478616	IN	NS	k.root-servers.net.
+;; Received 508 bytes from 192.168.1.1#53(192.168.1.1) in 21 ms
+
+com.			172800	IN	NS	e.gtld-servers.net.
+com.			172800	IN	NS	b.gtld-servers.net.
+com.			172800	IN	NS	j.gtld-servers.net.
+com.			172800	IN	NS	m.gtld-servers.net.
+com.			172800	IN	NS	i.gtld-servers.net.
+com.			172800	IN	NS	f.gtld-servers.net.
+com.			172800	IN	NS	a.gtld-servers.net.
+com.			172800	IN	NS	g.gtld-servers.net.
+com.			172800	IN	NS	h.gtld-servers.net.
+com.			172800	IN	NS	l.gtld-servers.net.
+com.			172800	IN	NS	k.gtld-servers.net.
+com.			172800	IN	NS	c.gtld-servers.net.
+com.			172800	IN	NS	d.gtld-servers.net.
+;; Received 500 bytes from 198.41.0.4#53(198.41.0.4) in 27 ms
+
+google.com.		172800	IN	NS	ns2.google.com.
+google.com.		172800	IN	NS	ns1.google.com.
+google.com.		172800	IN	NS	ns3.google.com.
+google.com.		172800	IN	NS	ns4.google.com.
+;; Received 164 bytes from 192.42.93.30#53(192.42.93.30) in 18 ms
+
+google.com.		300	IN	A	172.217.5.110
+;; Received 44 bytes from 216.239.36.10#53(216.239.36.10) in 86 ms
+
+====================================================
+
+; <<>> DiG 9.8.3-P1 <<>> +trace +tries=1 +nofail google.com
+;; global options: +cmd
+.			478616	IN	NS	l.root-servers.net.
+.			478616	IN	NS	m.root-servers.net.
+.			478616	IN	NS	a.root-servers.net.
+.			478616	IN	NS	b.root-servers.net.
+.			478616	IN	NS	c.root-servers.net.
+.			478616	IN	NS	d.root-servers.net.
+.			478616	IN	NS	e.root-servers.net.
+.			478616	IN	NS	f.root-servers.net.
+.			478616	IN	NS	g.root-servers.net.
+.			478616	IN	NS	h.root-servers.net.
+.			478616	IN	NS	i.root-servers.net.
+.			478616	IN	NS	j.root-servers.net.
+.			478616	IN	NS	k.root-servers.net.
+;; Received 508 bytes from 192.168.1.1#53(192.168.1.1) in 19 ms
+
+com.			172800	IN	NS	a.gtld-servers.net.
+com.			172800	IN	NS	b.gtld-servers.net.
+com.			172800	IN	NS	c.gtld-servers.net.
+com.			172800	IN	NS	d.gtld-servers.net.
+com.			172800	IN	NS	e.gtld-servers.net.
+com.			172800	IN	NS	f.gtld-servers.net.
+com.			172800	IN	NS	g.gtld-servers.net.
+com.			172800	IN	NS	h.gtld-servers.net.
+com.			172800	IN	NS	i.gtld-servers.net.
+com.			172800	IN	NS	j.gtld-servers.net.
+com.			172800	IN	NS	k.gtld-servers.net.
+com.			172800	IN	NS	l.gtld-servers.net.
+com.			172800	IN	NS	m.gtld-servers.net.
+;; Received 488 bytes from 199.7.83.42#53(199.7.83.42) in 20 ms
+
+google.com.		172800	IN	NS	ns2.google.com.
+google.com.		172800	IN	NS	ns1.google.com.
+google.com.		172800	IN	NS	ns3.google.com.
+google.com.		172800	IN	NS	ns4.google.com.
+;; Received 164 bytes from 192.42.93.30#53(192.42.93.30) in 16 ms
+
+google.com.		300	IN	A	172.217.5.110
+;; Received 44 bytes from 216.239.38.10#53(216.239.38.10) in 34 ms
+
+===============================================
+
+; <<>> DiG 9.8.3-P1 <<>> +trace +tries=1 +nofail google.com
+;; global options: +cmd
+.			478631	IN	NS	l.root-servers.net.
+.			478631	IN	NS	g.root-servers.net.
+.			478631	IN	NS	a.root-servers.net.
+.			478631	IN	NS	c.root-servers.net.
+.			478631	IN	NS	i.root-servers.net.
+.			478631	IN	NS	m.root-servers.net.
+.			478631	IN	NS	f.root-servers.net.
+.			478631	IN	NS	k.root-servers.net.
+.			478631	IN	NS	j.root-servers.net.
+.			478631	IN	NS	b.root-servers.net.
+.			478631	IN	NS	d.root-servers.net.
+.			478631	IN	NS	e.root-servers.net.
+.			478631	IN	NS	h.root-servers.net.
+;; Received 508 bytes from 192.168.1.1#53(192.168.1.1) in 22 ms
+
+com.			172800	IN	NS	m.gtld-servers.net.
+com.			172800	IN	NS	j.gtld-servers.net.
+com.			172800	IN	NS	b.gtld-servers.net.
+com.			172800	IN	NS	c.gtld-servers.net.
+com.			172800	IN	NS	g.gtld-servers.net.
+com.			172800	IN	NS	i.gtld-servers.net.
+com.			172800	IN	NS	a.gtld-servers.net.
+com.			172800	IN	NS	h.gtld-servers.net.
+com.			172800	IN	NS	e.gtld-servers.net.
+com.			172800	IN	NS	d.gtld-servers.net.
+com.			172800	IN	NS	l.gtld-servers.net.
+com.			172800	IN	NS	k.gtld-servers.net.
+com.			172800	IN	NS	f.gtld-servers.net.
+;; Received 488 bytes from 202.12.27.33#53(202.12.27.33) in 173 ms
+
+google.com.		172800	IN	NS	ns2.google.com.
+google.com.		172800	IN	NS	ns1.google.com.
+google.com.		172800	IN	NS	ns3.google.com.
+google.com.		172800	IN	NS	ns4.google.com.
+;; Received 164 bytes from 192.41.162.30#53(192.41.162.30) in 83 ms
+
+google.com.		300	IN	A	172.217.5.110
+;; Received 44 bytes from 216.239.32.10#53(216.239.32.10) in 34 ms
+
+========================================================
+
+; <<>> DiG 9.8.3-P1 <<>> +trace +tries=1 +nofail google.com
+;; global options: +cmd
+.			478631	IN	NS	e.root-servers.net.
+.			478631	IN	NS	h.root-servers.net.
+.			478631	IN	NS	l.root-servers.net.
+.			478631	IN	NS	g.root-servers.net.
+.			478631	IN	NS	a.root-servers.net.
+.			478631	IN	NS	c.root-servers.net.
+.			478631	IN	NS	i.root-servers.net.
+.			478631	IN	NS	m.root-servers.net.
+.			478631	IN	NS	f.root-servers.net.
+.			478631	IN	NS	k.root-servers.net.
+.			478631	IN	NS	j.root-servers.net.
+.			478631	IN	NS	b.root-servers.net.
+.			478631	IN	NS	d.root-servers.net.
+;; Received 508 bytes from 192.168.1.1#53(192.168.1.1) in 21 ms
+
+com.			172800	IN	NS	h.gtld-servers.net.
+com.			172800	IN	NS	j.gtld-servers.net.
+com.			172800	IN	NS	e.gtld-servers.net.
+com.			172800	IN	NS	f.gtld-servers.net.
+com.			172800	IN	NS	g.gtld-servers.net.
+com.			172800	IN	NS	d.gtld-servers.net.
+com.			172800	IN	NS	l.gtld-servers.net.
+com.			172800	IN	NS	i.gtld-servers.net.
+com.			172800	IN	NS	c.gtld-servers.net.
+com.			172800	IN	NS	b.gtld-servers.net.
+com.			172800	IN	NS	k.gtld-servers.net.
+com.			172800	IN	NS	a.gtld-servers.net.
+com.			172800	IN	NS	m.gtld-servers.net.
+;; Received 500 bytes from 192.36.148.17#53(192.36.148.17) in 159 ms
+
+google.com.		172800	IN	NS	ns2.google.com.
+google.com.		172800	IN	NS	ns1.google.com.
+google.com.		172800	IN	NS	ns3.google.com.
+google.com.		172800	IN	NS	ns4.google.com.
+;; Received 164 bytes from 192.33.14.30#53(192.33.14.30) in 90 ms
+
+google.com.		300	IN	A	172.217.5.110
+;; Received 44 bytes from 216.239.32.10#53(216.239.32.10) in 35 ms
+
+========================================================
+
+; <<>> DiG 9.8.3-P1 <<>> +trace +tries=1 +nofail google.com
+;; global options: +cmd
+.			478679	IN	NS	f.root-servers.net.
+.			478679	IN	NS	b.root-servers.net.
+.			478679	IN	NS	j.root-servers.net.
+.			478679	IN	NS	g.root-servers.net.
+.			478679	IN	NS	d.root-servers.net.
+.			478679	IN	NS	l.root-servers.net.
+.			478679	IN	NS	a.root-servers.net.
+.			478679	IN	NS	k.root-servers.net.
+.			478679	IN	NS	c.root-servers.net.
+.			478679	IN	NS	m.root-servers.net.
+.			478679	IN	NS	e.root-servers.net.
+.			478679	IN	NS	i.root-servers.net.
+.			478679	IN	NS	h.root-servers.net.
+;; Received 508 bytes from 192.168.1.1#53(192.168.1.1) in 21 ms
+
+com.			172800	IN	NS	k.gtld-servers.net.
+com.			172800	IN	NS	a.gtld-servers.net.
+com.			172800	IN	NS	j.gtld-servers.net.
+com.			172800	IN	NS	m.gtld-servers.net.
+com.			172800	IN	NS	c.gtld-servers.net.
+com.			172800	IN	NS	l.gtld-servers.net.
+com.			172800	IN	NS	d.gtld-servers.net.
+com.			172800	IN	NS	i.gtld-servers.net.
+com.			172800	IN	NS	g.gtld-servers.net.
+com.			172800	IN	NS	h.gtld-servers.net.
+com.			172800	IN	NS	b.gtld-servers.net.
+com.			172800	IN	NS	f.gtld-servers.net.
+com.			172800	IN	NS	e.gtld-servers.net.
+;; Received 488 bytes from 199.7.91.13#53(199.7.91.13) in 18 ms
+
+google.com.		172800	IN	NS	ns2.google.com.
+google.com.		172800	IN	NS	ns1.google.com.
+google.com.		172800	IN	NS	ns3.google.com.
+google.com.		172800	IN	NS	ns4.google.com.
+;; Received 164 bytes from 192.33.14.30#53(192.33.14.30) in 97 ms
+
+google.com.		300	IN	A	172.217.5.110
+;; Received 44 bytes from 216.239.38.10#53(216.239.38.10) in 37 ms
+
+
