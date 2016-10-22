@@ -233,10 +233,10 @@ where `1.2.3.4` is the DNS server's address.
 - “Queries”: list of all of the queries made for a single dig call.  The format of each query is:
   - “Time”: integer representing the time taken to complete the query
   - “Answers”: a list of answers for the query.  The format of each answer is:
-  - “Queried name”: The name that was queried for (e.g., “.” or “.com.”). This is the first field in the dig output.
-  - “Data”: result (e.g., for NS records, the name of a DNS server, or for A records, an IP address)
-  - “Type”: type of the answer (e.g., “CNAME” or “A”)
-  - “TTL”: Integer representing the TTL of the answer
+    - “Queried name”: The name that was queried for (e.g., “.” or “.com.”). This is the first field in the dig output.
+    - “Data”: result (e.g., for NS records, the name of a DNS server, or for A records, an IP address)
+    - “Type”: type of the answer (e.g., “CNAME” or “A”)
+    - “TTL”: Integer representing the TTL of the answer
 
 We’ve provided each of these key names in `utils.py`, and we’ve also provided an example of 5 iterations for one website (www.google.com) in `examples/dig_sample_output.json`.  See `examples/readme.md` for more information about this file.  There's also a test for your dig dns output in `project3_tests.py`.
 
