@@ -1,5 +1,3 @@
-1476910417.7
-traceroute twitter.com
  1  [AS25] soda4a-gw.eecs.berkeley.edu (128.32.132.1)  1.975 ms  16.310 ms  0.725 ms
  2  [AS25] soda-288-core-228.eecs.berkeley.edu (169.229.63.228)  0.356 ms  7.206 ms  0.246 ms
  3  [AS25] edge-10g-soda.eecs.berkeley.edu (169.229.59.241)  1.979 ms  1.543 ms  3.347 ms
