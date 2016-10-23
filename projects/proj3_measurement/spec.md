@@ -62,6 +62,8 @@ You can do so by calling the `ping` shell command from python using the subproce
 
 ``` ping -c 100 google.com ```
 
+*Note: the -c argument may be different on Windows. If it doesn't work, try -n instead.*
+
 `run_ping` should generate two json outputs.
 
 - Raw ping results. This file includes the detailed result on a per packet level. The data format is:
