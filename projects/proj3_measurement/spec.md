@@ -100,7 +100,7 @@ The other two functions should should generate CDF graphs using the json data pr
 
 Using your scripts, please run the following experiments.
 
-a) Ping each each Alexa top 100 website 10 times. You should store `rtts.py`'s output in two files: `rtt_a_raw.json` (with raw json data only) and `rtt_a_agg.json` (with aggregated json data only). 
+a) Ping each Alexa top 100 website 10 times. You should store `rtts.py`'s output in two files: `rtt_a_raw.json` (with raw json data only) and `rtt_a_agg.json` (with aggregated json data only). 
 
 b) Next, we want to take a look at a few websites’ ping behavior in more detail. The websites are: google.com, todayhumor.co.kr, zanvarsity.ac.tz, taobao.com. Ping each website 500 times. Again, generate two json files: `rtt_b_raw.json` and `rtt_b_agg.json`.
 
