@@ -104,6 +104,10 @@ a) Ping each Alexa top 100 website 10 times. You should store `rtts.py`'s output
 
 b) Next, we want to take a look at a few websites’ ping behavior in more detail. The websites are: google.com, todayhumor.co.kr, zanvarsity.ac.tz, taobao.com. Ping each website 500 times. Again, generate two json files: `rtt_b_raw.json` and `rtt_b_agg.json`.
 
+Important note: some `ping` implementations seem to exhibit the following behavior: it does not print the timeout message until it starts sending the *next* packet.
+Therefore, if a website does not respond to `ping` at all, you will only get 9 output messages when you ping the website 10 times.
+To make sure that you don't miss a timeout message, please try to run the experiments with *one more ping packet* than needed (e.g. for part a, ping each website 11 times instead of 10 times), then parse only the necessary output (e.g. for part a, parse the first 10 RTTs if you get 11 RTTs back).
+
 **Short answer questions**
 
 1. Questions on experiment a:
