@@ -220,7 +220,7 @@ Your script should resolve each site starting from the root (i.e., first query t
 
     dig +trace +tries=1 +nofail www.google.com
     
-Note that this command also includes some extra flags.  The `+tries=1` and `+nofail` flags signal to dig not to failover when the DNs lookup fails, so that you can count how many lookups fail.
+Note that this command also includes some extra flags.  The `+tries=1` and `+nofail` flags signal to dig not to failover when the DNS lookup fails, so that you can count how many lookups fail.
 
 If the `dns_query_server` is specified, your script should send DNS requests to the specified server, and should not use the `+trace` argument; e.g.:
 
