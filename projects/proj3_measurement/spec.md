@@ -322,6 +322,21 @@ The easiest way to call a shell command is to use the `subprocess` library's `ch
     import subprocess
     ls_output = subprocess.check_output("ls", shell=True)
 
+
+    
+##### What is a CDF and what should my CDF look like?
+
+A CDF (cumulative distribution function) shows, for all values *x* on the x-axis, the probability that a variable will take a value less than or equal to *x* (see [Wikipedia](https://en.wikipedia.org/wiki/Cumulative_distribution_function) for more).  For example, here's a CDF we generated of the TTLs of DNS entries for the Alexa top 100 websites:
+
+![Example CDF of DNS ttls](https://github.com/NetSys/cs168_student/blob/master/projects/proj3_measurement/example_cdf_dns_ttl.pdf)
+
+Note that you do not need to make this CDF (but it may be useful for sanity checking your results); for the TTL of DNS entries, you're only expected to report the average.  This particular CDF uses a log-scale x-axis (you also do not need to do this!).
+
+One thing you can understand from a CDF is median values: the median value is the x-value at which the y-value of the line is 0.5.  In the example CDF above, the median TTL of the terminating DNS record (i.e., the A or CNAME record) is 200 seconds.  The median TTL of the DNS entries for the root servers is approximately 5*10^5.  The CDF is also useful for understanding the distribution.  For example, from the CDF above, we can see that the root servers and top level domain servers have essentially constant TTL, because the CDF is a straight vertical line (this makes sense since all queries use the same root server).  On the other hand, the terminating records and other records have TTLs that vary much more widely.  For the terminating DNS records for example, the shortest 5% of TTLs are less than about 50 seconds, and the largest 5% of TTLs are more than 10^5 seconds (~27 hours)(it's hard to see the exact value for the largest 5% because the legend covers it up -- this poor placement of the legend is not something you should emulate!).
+
+The CDFs you make should be visually similar to the plot above (see the following FAQ for how to do this using matplotlib).
+
+
 ##### How should I generate a plot?
 
 We recommend using matplotlib to generate plots.  Suppose you have list x_values that contains all of the x values of points that you’d like to plot, and a second corresponding list (with the same length) y_values:
