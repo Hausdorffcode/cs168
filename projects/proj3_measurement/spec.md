@@ -115,7 +115,7 @@ To make sure that you don't miss a timeout message, please try to run the experi
    - Using the plot functions and `rtt_a_agg.json`, please plot a CDF of the *median* RTT of the websites that respond to ping.
 2. Questions on experiment b:
    - What are the median RTT and maximum RTT for each website? What loss rate do you observe?
-   - Using the plot functions to and `rtt_b_raw.json`, please plot a CDF of the RTT for *each* website (i.e. there should be 4 different graphs).
+   - Using the plot functions to and `rtt_b_raw.json`, please plot a CDF of the RTT for *each* website. You can plot the four CDFs on the same graph. Be sure to include a legend so we know which CDF corresponds to which of the four websites.
 3. In this question, you will analyze the ping times to two websites and compare the results to the expected speed-of-light times. The websites are google.com (located in Mountain View, CA, USA) and zanvarsity.ac.tz (located in Zanzibar, Tanzania). You can use your ping data from experiment b. The distance from Berkeley to Mountain view is 35.23 miles, and the distance from Berkeley to Zanzibar is 9,953.50 miles.
    - Compare the median ping time to the speed of light time.  What’s the multiplier for each server (calculate as [ping time / speed of light time])?
    - Using one sentence each, list two reasons why the ping time is not equal to the speed of light time.  Plausible but unlikely answers (e.g., “a bear chewed through the wire, causing a long delay) will not receive full credit.
