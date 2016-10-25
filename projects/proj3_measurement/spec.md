@@ -328,7 +328,7 @@ The easiest way to call a shell command is to use the `subprocess` library's `ch
 
 A CDF (cumulative distribution function) shows, for all values *x* on the x-axis, the probability that a variable will take a value less than or equal to *x* (see [Wikipedia](https://en.wikipedia.org/wiki/Cumulative_distribution_function) for more).  For example, here's a CDF we generated of the TTLs of DNS entries for the Alexa top 100 websites:
 
-![Example CDF of DNS ttls](https://github.com/NetSys/cs168_student/blob/master/projects/proj3_measurement/example_cdf_dns_ttl.pdf)
+![Example CDF of DNS ttls](https://github.com/NetSys/cs168_student/files/549709/example_cdf_dns_ttl.pdf)
 
 Note that you do not need to make this CDF (but it may be useful for sanity checking your results); for the TTL of DNS entries, you're only expected to report the average.  This particular CDF uses a log-scale x-axis (you also do not need to do this!).
 
