@@ -86,8 +86,7 @@ You can do so by calling the `ping` shell command from python using the subproce
   }
   ```
 
-  The hostnames are again strings and are each mapped to three aggregated numbers: drop rate, maximum RTT, and median RTT. Drop rate should be specified in percentage between 0.0 and 100.0 (e.g. if you observe 5 packets dropped in a ping run of 500, the percentage is 1.0). Max RTT and median RTT should be in milliseconds. All three numbers should be floats.
-If a website does not respond to pings at all, then max and median RTT should be -1.0, and drop rate should be 100.0.
+  The hostnames are again strings and are each mapped to three aggregated numbers: drop rate, maximum RTT, and median RTT. Drop rate should be specified in percentage between 0.0 and 100.0 (e.g. if you observe 5 packets dropped in a ping run of 500, the percentage is 1.0). Max RTT and median RTT should be in milliseconds. All three numbers should be floats. If a website has a few dropped ping packets, do NOT include these in the median/max calculation. If a website does not respond to pings at all, then max and median RTT should be -1.0, and drop rate should be 100.0.
 
 For example outputs, please take a look at `examples/sample_ping.txt` and `examples/sample_ping.json`. The text file shows the raw text output from pinging google.com 10 times, and the json file shows the json formatted raw ping results. 
 
