@@ -358,7 +358,7 @@ We recommend using matplotlib to generate plots.  Suppose you have list x_values
      plot.legend() # This shows the legend on the plot.
      plot.grid() # Show grid lines, which makes the plot easier to read.
      plot.xlabel("x axis!") # Label the x-axis.
-     plot.xlabel("y axis!") # Label the y-axis.
+     plot.ylabel("y axis!") # Label the y-axis.
      plot.show()
 
 ##### How can I automatically save the result of my plot to a file?
