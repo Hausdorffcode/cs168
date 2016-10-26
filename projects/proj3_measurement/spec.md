@@ -10,7 +10,7 @@ In this project, you'll use three command-line tools to analyze the behavior of 
 
 ##### What should I submit?
 
-- Submit your code and data using `ok`.  You should submit the following, described in more detail below:
+- Submit your Python code and JSON data using `ok`. Your code should be Python 2 compatible. In particular, you should submit the following files (described in more detail in later sections):
 
   Code:
     - `rtts.py`
@@ -103,9 +103,6 @@ a) Ping each Alexa top 100 website 10 times. You should store `rtts.py`'s output
 
 b) Next, we want to take a look at a few websites’ ping behavior in more detail. The websites are: google.com, todayhumor.co.kr, zanvarsity.ac.tz, taobao.com. Ping each website 500 times. Again, generate two json files: `rtt_b_raw.json` and `rtt_b_agg.json`.
 
-Important note: some `ping` implementations seem to exhibit the following behavior -- a timeout message is not printed until the program starts sending the *next* packet.
-Therefore, if a website does not respond to `ping` at all, you will only get 9 output messages when you ping the website 10 times.
-To make sure that you don't miss a timeout message, please try to run the experiments with *one more ping packet* than needed (e.g. for part a, ping each website 11 times instead of 10 times), then parse only the necessary output (e.g. for part a, parse the first 10 RTTs if you get 11 RTTs back).
 
 **Short answer questions**
 
@@ -119,6 +116,17 @@ To make sure that you don't miss a timeout message, please try to run the experi
    - Compare the median ping time to the speed of light time.  What’s the multiplier for each server (calculate as [ping time / speed of light time])?
    - Using one sentence each, list two reasons why the ping time is not equal to the speed of light time.  Plausible but unlikely answers (e.g., “a bear chewed through the wire, causing a long delay) will not receive full credit.
    - [Optional] Repeat #3 for any website you might be curious about. How much route inflation do you observe? This [tool](http://pythonhosted.org/python-geoip/) might be useful in identifying a website’s physical location.
+
+**Important notes**
+
+- Some `ping` implementations seem to exhibit the following behavior -- a timeout message is not printed until the program starts sending the *next* packet.
+Therefore, if a website does not respond to `ping` at all, you will only get 9 output messages when you ping the website 10 times.
+To make sure that you don't miss a timeout message, please try to run the experiments with *one more ping packet* than needed (e.g. for part a, ping each website 11 times instead of 10 times), then parse only the necessary output (e.g. for part a, parse the first 10 RTTs if you get 11 RTTs back).
+
+- Some Windows machines do not seem to be able to measure RTTs accurately (they do not go past the millisecond precision). Please try to use a machine that does measure accurately (some of the instructional machines, like hive[x].cs.berkeley.edu, should support accurate ping measurements).
+
+- You don't have to worry about rounding your RTT numbers -- just use the numbers that ping outputs, and convert into a float.
+
 
 ##### Part 1 hints
 - Be careful with parsing pings that fail because the output data format will be different.
