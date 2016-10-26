@@ -39,7 +39,7 @@ def rtt_part_b_check(text):
     if len(output) != len(sites):
         raise Exception("expected " + str(len(sites)) + " websites, got " + str(len(output)) + " websites")
     for h, rtts in output.iteritems():
-        if len(rtts) != 10:
+        if len(rtts) != 500:
             raise Exception("expected 500 pings for website " + str(h) + ", got " + str(len(rtts)) + " pings")
     for h in sites:
         if h not in output:
