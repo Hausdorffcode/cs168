@@ -354,7 +354,7 @@ The CDFs you make should be visually similar to the plot above (see the followin
 We recommend using matplotlib to generate plots.  Suppose you have list x_values that contains all of the x values of points that you’d like to plot, and a second corresponding list (with the same length) y_values:
 
      import matplotlib.pyplot as plot
-     plot.plot(y_values, x_values, label=”My data”)
+     plot.plot(x_values, y_values, label=”My data”)
      plot.legend() # This shows the legend on the plot.
      plot.grid() # Show grid lines, which makes the plot easier to read.
      plot.xlabel("x axis!") # Label the x-axis.
