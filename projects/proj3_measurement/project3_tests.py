@@ -64,8 +64,8 @@ def path_check(path):
             if "ip" not in server:
                 msg = "'ip' not found"
                 raise Exception(msg)
-            if "asn" not in server:
-                msg = "'asn' not found"
+            if "ASN" not in server:
+                msg = "'ASN' not found"
                 raise Exception(msg)
             
 def tr_single_run_check(output, sites):
