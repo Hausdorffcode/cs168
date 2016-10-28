@@ -49,7 +49,7 @@ def rtt_part_b_check(text):
 
 def path_check(path):
     if type(path) != list:
-        msg = "expected list type for 'path' value, instead got type " + str(type(run_data["path"]))
+        msg = "expected list type for 'path' value, instead got type " + str(type(path))
         raise Exception(msg)
                 
     for hop in path:
