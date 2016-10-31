@@ -365,5 +365,5 @@ We recommend using matplotlib to generate plots.  Suppose you have list x_values
 
      from matplotlib.backends import backend_pdf
      my_filepath = “dns_plot.pdf”
-     with backendpdf.PdfPages(my_filepath) as pdf:
+     with backend_pdf.PdfPages(my_filepath) as pdf:
           pdf.savefig()
