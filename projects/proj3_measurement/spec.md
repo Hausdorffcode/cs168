@@ -28,13 +28,13 @@ In this project, you'll use three command-line tools to analyze the behavior of 
     - `dns_output_2.json`
     - `dns_output_other_server.json`
 
-- In addition to submitting your code to `ok`, you should submit a set of short answers and graphs to gradescope.  The specific short answers and graphs you should generate are listed in the sections that follow.  We will update the link to submit this shortly.  This must be submitted as a PDF; you can create the PDF using whatever tool is most convenient for you.
+- In addition to submitting your code to `ok`, you should submit a set of short answers and graphs to Gradescope.  The specific short answers and graphs you should generate are listed in the sections that follow.  We will update the link to submit this shortly.  This must be submitted as a PDF; you can create the PDF using whatever tool is most convenient for you.
 
 ##### Provided files
 
 We have provided the following files for your use:
 
-- `alexa_top_100`: The top 100 most popular websites.  This is the real top 100 alexa websites; we have not censored this. As a result, use caution before visiting any of the websites.
+- `alexa_top_100`: The top 100 most popular websites.  This is the real top 100 Alexa websites; we have not censored this. As a result, use caution before visiting any of the websites.
 - `project3_tests.py`: A set of tests for you to run on your code. This file mostly tests json data formats, so feel free to write your own correctness tests.
 - The `examples` directory contains example output, described in more detail in the sections that follow.
 
@@ -111,7 +111,7 @@ b) Next, we want to take a look at a few websites’ ping behavior in more detai
    - Using the plot functions and `rtt_a_agg.json`, please plot a CDF of the *median* RTT of the websites that respond to ping.
 2. Questions on experiment b:
    - What are the median RTT and maximum RTT for each website? What loss rate do you observe?
-   - Using the plot functions to and `rtt_b_raw.json`, please plot a CDF of the RTT for *each* website. You can plot the four CDFs on the same graph. Be sure to include a legend so we know which CDF corresponds to which of the four websites.
+   - Using the plot functions and `rtt_b_raw.json`, please plot a CDF of the RTT for *each* website. You can plot the four CDFs on the same graph. Be sure to include a legend so we know which CDF corresponds to which of the four websites.
 3. In this question, you will analyze the ping times to two websites and compare the results to the expected speed-of-light times. The websites are google.com (located in Mountain View, CA, USA) and zanvarsity.ac.tz (located in Zanzibar, Tanzania). You can use your ping data from experiment b. The distance from Berkeley to Mountain view is 35.23 miles, and the distance from Berkeley to Zanzibar is 9,953.50 miles.
    - Compare the median ping time to the speed of light time.  What’s the multiplier for each server (calculate as [ping time / speed of light time])?
    - Using one sentence each, list two reasons why the ping time is not equal to the speed of light time.  Plausible but unlikely answers (e.g., “a bear chewed through the wire, causing a long delay) will not receive full credit.
@@ -171,18 +171,18 @@ Your script should produce json output in the following format:
 }
 ```
 
-Each run has a unix timestamp (you can use the`time` module in python), and it should be a string. The timestamp indicates when a specific run is started. Each hostname should also be formatted as a string. The value corresponding to each hostname is a list of routers encountered on the path. The first item in the list corresponds to the first hop, second item is the second hop, etc. Each hop is also a list (traceroute may encounter multiple routers within the same hop!). Finally, each router should have three fields: name, IP, and AS number. Everything should be string formatted, including the AS number. Unfortunately, not every router will respond to traceroute. If this is the case, simply output “None” for each field.
+Each run has a Unix timestamp (you can use the`time` module in python), and it should be a string. The timestamp indicates when a specific run is started. Each hostname should also be formatted as a string. The value corresponding to each hostname is a list of routers encountered on the path. The first item in the list corresponds to the first hop, second item is the second hop, etc. Each hop is also a list (traceroute may encounter multiple routers within the same hop!). Finally, each router should have three fields: name, IP, and AS number. Everything should be string formatted, including the AS number. Unfortunately, not every router will respond to traceroute. If this is the case, simply output “None” for each field.
 
 For example outputs (both raw text output and json output), please take a look at `traceroute_sample.txt` and `traceroute_sample.json`.
 The text file contains text output from the traceroute command, and the json file contains the corresponding parsed json output.
 
 **Experiments**
 
-a) For part a, you will look at the routing behvaior to the following websites: google.com, facebook.com, www.berkeley.edu, allspice.lcs.mit.edu, todayhumor.co.kr, www.city.kobe.lg.jp, www.vutbr.cz, zanvarsity.ac.tz. For this experiment, please try to run traceroute from campus. You should run `traceroute.py` 5 times (with 5 packets each time), and each consecutive run should be at least 1 hour apart.
+a) For part a, you will look at the routing behavior to the following websites: google.com, facebook.com, www.berkeley.edu, allspice.lcs.mit.edu, todayhumor.co.kr, www.city.kobe.lg.jp, www.vutbr.cz, zanvarsity.ac.tz. For this experiment, please try to run traceroute from campus. You should run `traceroute.py` 5 times (with 5 packets each time), and each consecutive run should be at least 1 hour apart.
 You should generate a json file named `tr_a.json`.
 This file should be 5 lines long, where *each line* is a single run of `traceroute.py` on the above websites. You should be able to generate this file by appending output from your script to `tr_a.json`.
 
-b) There are many [public route servers](http://www.traceroute.org/#Route%20Servers) hosted in different regions that are useful for measuring internet routing state. We will use several of these servers to observe *route symmetry*. For this question, please use the folloawing list of public servers: tpr-route-server.saix.net, route-server.ip-plus.net, route-views.oregon-ix.net, route-server.eastern.allstream.com.
+b) There are many [public route servers](http://www.traceroute.org/#Route%20Servers) hosted in different regions that are useful for measuring internet routing state. We will use several of these servers to observe *route symmetry*. For this question, please use the following list of public servers: tpr-route-server.saix.net, route-server.ip-plus.net, route-views.oregon-ix.net, route-server.eastern.allstream.com.
 
 - Run traceroute from your computer to the public route servers. 
 - Run traceroute from the public servers to your computer. *Note: if your computer does not have a public IP address, try to run traceroute to its first hop router*
