@@ -194,8 +194,8 @@ b) There are many [public route servers](http://www.traceroute.org/#Route%20Serv
 1. Answer the following questions using the results obtained from experiment a.
    * Which ASes are Berkeley directly connected to?
    * Which traceroute traverses the most number of ASes? How about the least number of ASes?
-   * Which websites are load-balanced?
-   * Are the observed routes stable over multiple runs?  For each website, how many unique routes did you observe?
+   * Which websites' routes are load-balanced?
+   * Are the observed routes stable over multiple runs? For each website, how many unique routes did you observe?
    * Using one sentence, please explain one advantage of having stable routes.
    * [Optional] Make a graph of the ASes and their connectivity.
 
