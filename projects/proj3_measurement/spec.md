@@ -182,7 +182,7 @@ a) For part a, you will look at the routing behavior to the following websites: 
 You should generate a json file named `tr_a.json`.
 This file should be 5 lines long, where *each line* is a single run of `traceroute.py` on the above websites. You should be able to generate this file by appending output from your script to `tr_a.json`.
 
-b) There are many [public route servers](http://www.traceroute.org/#Route%20Servers) hosted in different regions that are useful for measuring internet routing state. We will use several of these servers to observe *route symmetry*. For this question, please use the following list of public servers: tpr-route-server.saix.net, route-server.ip-plus.net, route-views.oregon-ix.net, route-server.eastern.allstream.com.
+b) There are many [public route servers](http://www.traceroute.org/#Route%20Servers) hosted in different regions that are useful for measuring internet routing state. We will use several of these servers to observe *route symmetry*. For this question, please choose FOUR of these five public route servers: tpr-route-server.saix.net, route-server.ip-plus.net, route-views.oregon-ix.net, route-server.eastern.allstream.com, route-views.on.bb.telus.com.
 
 - Run traceroute from your computer to the public route servers. 
 - Run traceroute from the public servers to your computer. *Note: if your computer does not have a public IP address, try to run traceroute to its first hop router*
