@@ -143,7 +143,7 @@ The file should also be able to parse the shell traceroute command output direct
 The script should contain two functions:
 
 - `run_traceroute(hostnames, num_packets, output_filename)`: used to run the traceroute command on a list of hostnames. Outputs the traceroute command's results.
-  * `hostnames`: a  filename containing a list of hostnames for traceroute
+  * `hostnames`: a list of hostnames for traceroute
   * `num_packets`: how many packets to send to each hop
   * `output_filename`: where to save the traceroute command's results 
 - `parse_traceroute(raw_traceroute_filename, output_filename)`: this function should be able to take in outputs from a traceroute run (either from `traceroute()` or from a separate run) and write out json data.
