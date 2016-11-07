@@ -240,7 +240,7 @@ where `1.2.3.4` is the DNS server's address.
 `run_dig` should generate json output with a list of json dictionaries each representing a single call to “dig”, and save the output to `output_filename`.  The representation of each call to “dig” should be structured as follows:
 
 - “Name”:  name being resolved
-- "Success": whether the dig call was successful (if this is false, there should be no other fields in the json output)
+- "Success": whether the dig call was successful (if this is false, the only other field in the json output should be "Name"; there shouldn't be any queries)
 - “Queries”: list of all of the queries made for a single dig call.  The format of each query is:
   - “Time”: integer representing the time taken to complete the query
   - “Answers”: a list of answers for the query.  The format of each answer is:
@@ -259,7 +259,7 @@ We’ve provided each of these key names in `utils.py`, and we’ve also provide
     - What’s the average TTL for any other name servers? (e.g., for google.com, this includes the google.com name server).
     - What’s the average TTL for the terminating CNAME or A entry?
 
-  In other words, it should return `[average_root_ttl, average_TLD_ttl, average_other_ttl, average_terminating_ttl]`.  All times should be in seconds.
+  In other words, it should return `[average_root_ttl, average_TLD_ttl, average_other_ttl, average_terminating_ttl]`.  All times should be in seconds, and these averages should be over all DNS queries in the given filename (not just the entries for a particular host).
 
   One thing that's tricky here is how to deal with queries that return multiple answers.  For example, suppose your json output had queries for just two sites.  For the sake of example, let's look at just the terminating entries for these sites:
   
@@ -277,7 +277,9 @@ We’ve provided each of these key names in `utils.py`, and we’ve also provide
 - `get_average_times(filename)`: This function should accept the name of a json file with output as specified above as input.  It should return a 2-item list that contains the following averages, in this order:
     - The average of the total time to resolve a site.  This should include the time to resolve all steps in the hierarchy.  For example, for google.com, it should include the time to contact a root server to determine the top level domain server (com) location, and the time to contact the com TLD server to resolve google, and the time to contact the google name server to resolve google.com.
     - The average of the time for just the final request that resulted in the A (or CNAME) record.
-- `generate_time_cdfs(json_filename, output_filename)`: This function should accept `json_filename`, the name of a json file with output as specified above as input.  It should generate a graph with a CDF of the distribution of each of the values described in the previous function (the total time to resolve a site and the time to resolve just the final request) and save it to `output_filename`.  It should not return anything.
+
+  As with `get_average_ttls`, these averages should be over all DNS queries in the given filename (not just the DNS queries for a particular hostname).
+- `generate_time_cdfs(json_filename, output_filename)`: This function should accept `json_filename`, the name of a json file with output as specified above as input.  It should generate a graph with two lines: one showing the CDF of the total time to resolve a site, an one showing the CDF of the time to resolve just the final request (these are the same two distributions that `get_average_times` returned the average of). The CDF should be saved to `output_filename`.  It should not return anything.
 - `count_different_dns_responses(filename1, filename2)`: This function should take the name of two files that each contain json dig output.  The idea of this function is to count the number of names that have changes in their __terminating entries__ (A or CNAME records for the hostname) in the two sets of dig runs in the two different filenames.  The function should return a list of two values.
 
     The first value should be the number of names that had a different answer just within the traced queries in `filename1`.  Since you'll have 5 iterations of each query, it's possible you'll have queries that returned different answers -- for example, in one of our trial runs, the first 4 dig calls to `google.co.kr` returned 172.217.5.99, and the last call returned 216.58.219.67.  In this case, `google.co.kr` is counted as one entry that changed within the first trial.  If `google.co.kr` had returned more than two different answers in a particular trial run (e.g., if the three calls returned 172.217.5.99, the fourth call returned 1.2.3.4, and the fifth call returned 216.58.219.67), this still counts as just one change, because you should be counting the number of *names* that had multiple different answers.  If one of the dig calls fails, that's not considered a change (you can ignore any failed dig calls for this function).
