@@ -176,6 +176,8 @@ Each run has a Unix timestamp (you can use the`time` module in python), and it s
 For example outputs (both raw text output and json output), please take a look at `traceroute_sample.txt` and `traceroute_sample.json`.
 The text file contains text output from the traceroute command, and the json file contains the corresponding parsed json output.
 
+Note: Sometimes you will see a particular router repeated *multiple times within the same hop*. Please de-duplicate these routers (i.e. only count the unique routers) for each hop.
+
 **Experiments**
 
 a) For part a, you will look at the routing behavior to the following websites: google.com, facebook.com, www.berkeley.edu, allspice.lcs.mit.edu, todayhumor.co.kr, www.city.kobe.lg.jp, www.vutbr.cz, zanvarsity.ac.tz. For this experiment, please try to run traceroute from campus. You should run `traceroute.py` 5 times (with 5 packets each time), and each consecutive run should be at least 1 hour apart.
