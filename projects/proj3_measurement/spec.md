@@ -185,7 +185,7 @@ This file should be 5 lines long, where *each line* is a single run of `tracerou
 b) There are many [public route servers](http://www.traceroute.org/#Route%20Servers) hosted in different regions that are useful for measuring internet routing state. We will use several of these servers to observe *route symmetry*. For this question, please choose FOUR of these five public route servers: tpr-route-server.saix.net, route-server.ip-plus.net, route-views.oregon-ix.net, route-server.eastern.allstream.com, route-views.on.bb.telus.com.
 
 - Run traceroute from your computer to the public route servers. 
-- Run traceroute from the public servers to your computer. *Note: if your computer does not have a public IP address, try to run traceroute to its first hop router*
+- Run traceroute from the public servers to your computer. *Note: if your computer does not have a public IP address, try to run traceroute to its first hop router. This means you should look at your forward traceroute first, then find the closest router to you that still has a public IP. Then simply traceroute to that instead.*
   * You can log into these servers directly using telnet (e.g. `telnet tpr-route-server.saix.net`). Note that some of them may require you to use a username/password.
 - You should produce a json file named `tr_b.json`. This file should be 2 lines long. The first line should be the json data from the run from your computer to the public route servers, and the second line should be the json data from traceroute run in the reverse direction.
 
