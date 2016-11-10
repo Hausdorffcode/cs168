@@ -176,7 +176,7 @@ Each run has a Unix timestamp (you can use the`time` module in python), and it s
 For example outputs (both raw text output and json output), please take a look at `traceroute_sample.txt` and `traceroute_sample.json`.
 The text file contains text output from the traceroute command, and the json file contains the corresponding parsed json output.
 
-Note: Sometimes you will see a particular router repeated *multiple times within the same hop*. Please de-duplicate these routers (i.e. only count the unique routers) for each hop.
+Note: Sometimes you will see a particular router repeated *multiple times within the same hop*. Please de-duplicate these routers (i.e. only count the unique routers) for each hop based on their IP.
 
 **Experiments**
 
