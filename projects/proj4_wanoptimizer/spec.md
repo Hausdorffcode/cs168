@@ -79,7 +79,7 @@ There are a few key questions to address:
 
 #### How does a WAN optimizer know whether a packet contains data, or a key that should be translated to data?
 
-Many protocols make use of the FLAGS field in the TCP header for purposes like this.  For this assignment, the Packet class has a boolean `is_raw_data` flag that your WAN optimizer should use to determine whether a packet has data (if the flag is true) or if the packet contains a key that should be translated to raw data by the receiving WAN optimizer.  Clients always send data with this flag sent to false; the flag is only set to true when data is sent between two WAN optimizers.
+Many protocols make use of the FLAGS field in the TCP header for purposes like this.  For this assignment, the Packet class has a boolean `is_raw_data` flag that your WAN optimizer should use to determine whether a packet has data (if the flag is true) or if the packet contains a key that should be translated to raw data by the receiving WAN optimizer.  Clients always send data with this flag set to True; the flag is only set to False when a key is sent between two WAN optimizers.
 
 #### How does each WAN optimizer know how to translate between keys and actual data?
 
