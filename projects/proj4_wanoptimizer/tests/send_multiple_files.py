@@ -44,8 +44,8 @@ def send_multiple_files(middlebox_module, testing_part_1):
             total_count += 1
 
     # Send a file from client 2 to clients 3 and 4.
-    client1.send_file(filename, client3_address)
-    client1.send_file(filename, client4_address)
+    client2.send_file(filename, client3_address)
+    client2.send_file(filename, client4_address)
 
     # Make sure that the files have the same contents.
     for receiver in ["client3", "client4"]:
