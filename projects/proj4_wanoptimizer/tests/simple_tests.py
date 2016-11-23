@@ -85,8 +85,14 @@ def send_multiple_different_blocks(middlebox_module, testing_part_1):
     checks for crrectness, and does not check the WAN optimizer's data reduction
     functionality.
     """
-    data = "a" * 5000 + "b" * 5000 + "c" * 5000 + "d" * 5000
+    if testing_part_1:
+        data = "a" * 5000 + "b" * 5000 + "c" * 5000 + "d" * 5000
+    else:
+        # The last character in the first block should be the "t" in "to". The remaining
+        # text should be a second block.
+        data = "a long, straight chin suggestive of resolution pushed to the length of obstinacy"
     simple_send_test(middlebox_module, data, None)
+
 
 def one_client_with_multiple_receivers(middlebox_module, testing_part_1):
     """ Tests a scenario where one client is sending data to 3 other clients.
