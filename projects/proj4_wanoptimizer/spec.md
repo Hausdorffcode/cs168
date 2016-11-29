@@ -280,6 +280,10 @@ You don't need to worry about the case when the WAN optimizer receives an invali
 
 No, you don't need to handle this case.  You can assume all traffic will traverse both WAN optimizers.
 
+#### Can my WAN optimizer be connected to multiple WAN optimizers?
+
+No, you don't need to handle this case. You can assume that each WAN optimizer is only connected to one remote WAN optimizer (but in practice, each WAN optimizer could be connected to multiple different WAN optimizers). 
+
 #### I'm getting `IOError: [Errno 2] No such file or directory` on many of the tests.
 
 If you see messages like 
