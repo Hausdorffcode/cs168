@@ -50,7 +50,7 @@ def data_reduction_random_edits_file(middlebox_module, testing_part_1):
 
     bytes_in_sent_files = 0
     for f in filename:
-        with open(f, "r") as input_file:
+        with open(f, "rb") as input_file:
             input_data = input_file.read()
 
         extra_data_length = len(f) + len(client.FILENAME_DELIMITER)

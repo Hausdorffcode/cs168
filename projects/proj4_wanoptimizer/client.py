@@ -91,7 +91,7 @@ class EndHost():
         filename = data[:filename_end]
         # Open the an output file using receiver's id and filename
         full_filename = "{}-{}".format(self.identifier, filename)
-        output_file = open(full_filename, "w")
+        output_file = open(full_filename, "wb")
         data_start = filename_end + len(FILENAME_DELIMITER)
 
         # Write the received data to a file.

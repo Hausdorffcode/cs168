@@ -27,11 +27,11 @@ def send_one_file(middlebox_module, testing_part_1):
     client1.send_file(filename, client2_address)
 
     # Make sure that the files have the same contents.
-    with open(filename, "r") as input_file:
+    with open(filename, "rb") as input_file:
         input_data = input_file.read()
 
     output_file_name = "{}-{}".format("client2", filename)
-    with open(output_file_name, "r") as output_file:
+    with open(output_file_name, "rb") as output_file:
         result_data = output_file.read()
     # Remove the output file just created.
     os.remove(output_file_name)

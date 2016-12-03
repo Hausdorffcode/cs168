@@ -15,7 +15,7 @@ class SimpleClient():
         self.gateway_middlebox.connect(self, self.ip_address)
 
         self.received_fin = False
-        self.output_file = open(output_filename, "w")
+        self.output_file = open(output_filename, "wb")
 
     def send_data(self, data_to_send, destination_ip_address):
         """ Packetizes and sends the given data.

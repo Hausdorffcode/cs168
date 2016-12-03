@@ -1,5 +1,5 @@
 def verify_data_sent_equals_data_received(data_sent, output_filename):
-    with open(output_filename, "r") as f:
+    with open(output_filename, "rb") as f:
         received_data = f.read()
         if received_data != data_sent:
             raise Exception(("Data received did not equal " +

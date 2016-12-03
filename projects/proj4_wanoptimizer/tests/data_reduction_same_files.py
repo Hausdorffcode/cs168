@@ -42,7 +42,7 @@ def data_reduction_same_files(middlebox_module, testing_part_1):
     os.remove(output_file_name)
 
     # Compute the data reduction ratio
-    with open(filename, "r") as input_file:
+    with open(filename, "rb") as input_file:
         input_data = input_file.read()
 
     extra_data_length = len(filename) + len(client.FILENAME_DELIMITER)

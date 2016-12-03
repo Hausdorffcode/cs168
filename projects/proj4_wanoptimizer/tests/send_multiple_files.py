@@ -25,7 +25,7 @@ def send_multiple_files(middlebox_module, testing_part_1):
     client4 = client.EndHost("client4", client4_address, middlebox2)
 
     filename = "sample.txt"
-    with open(filename, "r") as input_file:
+    with open(filename, "rb") as input_file:
         input_data = input_file.read()
 
     # Send the sample file from client 1 to both clients 3 and 4.
@@ -35,7 +35,7 @@ def send_multiple_files(middlebox_module, testing_part_1):
     # Make sure that the files have the same contents.
     for receiver in ["client3", "client4"]:
         output_file_name = "{}-{}".format(receiver, filename)
-        with open(output_file_name, "r") as output_file:
+        with open(output_file_name, "rb") as output_file:
             result_data = output_file.read()
         # Remove the output file just created.
         os.remove(output_file_name)
@@ -50,7 +50,7 @@ def send_multiple_files(middlebox_module, testing_part_1):
     # Make sure that the files have the same contents.
     for receiver in ["client3", "client4"]:
         output_file_name = "{}-{}".format(receiver, filename)
-        with open(output_file_name, "r") as output_file:
+        with open(output_file_name, "rb") as output_file:
             result_data = output_file.read()
         # Removing the output file just created
         os.remove(output_file_name)
