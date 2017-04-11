@@ -1,0 +1,14 @@
+traceroute to twitter.com (199.59.149.198), 64 hops max, 52 byte packets
+ 1  [AS25] soda4a-gw.eecs.berkeley.edu (128.32.132.1)  1.975 ms  16.310 ms  0.725 ms
+ 2  [AS25] soda-288-core-228.eecs.berkeley.edu (169.229.63.228)  0.356 ms  7.206 ms  0.246 ms
+ 3  [AS25] edge-10g-soda.eecs.berkeley.edu (169.229.59.241)  1.979 ms  1.543 ms  3.347 ms
+ 4  [AS25] t1-2.inr-201-sut.berkeley.edu (128.32.255.53)  1.643 ms  0.600 ms  0.532 ms
+ 5  [AS25] xe-0-2-0.inr-001-sut.berkeley.edu (128.32.0.64)  0.579 ms  8.489 ms  7.234 ms
+ 6  [AS2152] dc-sfo-agg-1--ucb-10ge.cenic.net (137.164.50.16)  7.056 ms  5.344 ms  2.170 ms
+ 7  [AS2152] dc-svl-agg4--sfo-agg1-10ge-1.cenic.net (137.164.22.27)  3.205 ms  2.893 ms  2.963 ms
+ 8  [AS3356] 10-1-1-91.ear1.sanjose1.level3.net (4.15.122.45)  2.909 ms  2.832 ms  2.758 ms
+ 9  [AS3356] ae-3-19.edge2.sanjose3.level3.net (4.69.209.189)  3.076 ms  3.171 ms
+    [AS3356] ae-1-9.edge2.sanjose3.level3.net (4.69.209.181)  3.118 ms
+10  [AS3356] 4.53.210.50 (4.53.210.50)  3.336 ms  3.292 ms  3.088 ms
+11  * * *
+12  [AS13414] www2.twitter.com (199.59.149.198)  6.509 ms  6.248 ms  6.322 ms
